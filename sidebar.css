@@ -28,7 +28,7 @@ html, body {
 	fill: #4a69bd;
 }
 .head-nav li:hover a {
-	color: #4a69bd;
+	color: black;
 }
 .head-nav li:before {
 	position: absolute;
@@ -95,7 +95,6 @@ html, body {
 	background: #4a69bd;
 	transition: 400ms;
 	padding-left: 20;
-
 }
 
 @media screen and (max: 768px) {
