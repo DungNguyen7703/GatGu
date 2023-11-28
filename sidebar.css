@@ -144,7 +144,7 @@ html, body {
     height: 100%;
     padding-left: 140px;
     margin-top: 0;
-    background-image: url(https://download.unsplash.com/photo-1428976365951-b70e0fa5c551);
+    background-color: #000000;
     background-size: cover;
     background-position: center center;
     transition: transform 400ms, opacity 400ms;
