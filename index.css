@@ -240,6 +240,7 @@ html, body {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 6px 0 rgba(0,0,0,0.3);
     border-radius: 0 0 10px 10px;
+    z-index: 999;
   }
   
   /* css item menu c2 */
@@ -273,8 +274,12 @@ html, body {
   /* Phần dưới menu (logo, thanh search, giỏ,...) */
   
   .header2 {
+    position: sticky; 
+    position: -webkit-sticky;
+    top: 0;
+    width: 100%; 
     background-color: #fff;
-    height: 120px;
+    height: 70px;
   }
   
   .menu {
@@ -286,7 +291,7 @@ html, body {
     display: flex;
     width: 20%;
     justify-content: flex-start;
-    height: 100px;
+    height: 50px;
     margin: 10px;
   }
   
