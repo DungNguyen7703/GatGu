@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Product Details</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <section class="py-5">
+    <div class="container">
+      <div class="row gx-5">
+
+        <aside class="col-lg-6">
+          <div class="border rounded-4 mb-3 d-flex justify-content-center">
+            <a data-fslightbox="mygalley" class="rounded-4" data-type="image" href="">
+              <img id="mainImage" style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
+                src="https://seve7.vn/wp-content/uploads/2023/05/4-2.jpg" />
+            </a>
+          </div>
+
+          <div class="d-flex justify-content-center mb-3">
+            <a class="thumbnail border mx-1 rounded-2" href="javascript:void(0);">
+              <img width="80" height="80" class="rounded-2" src="https://seve7.vn/wp-content/uploads/2023/05/3-2.jpg" />
+            </a>
+            <a class="thumbnail border mx-1 rounded-2" href="javascript:void(0);">
+              <img width="80" height="80" class="rounded-2" src="https://seve7.vn/wp-content/uploads/2023/05/8-2.jpg" />
+            </a>
+            <a class="thumbnail border mx-1 rounded-2" href="javascript:void(0);">
+              <img width="80" height="80" class="rounded-2" src="https://seve7.vn/wp-content/uploads/2023/05/4-2.jpg" />
+            </a>
+            <a class="thumbnail border mx-1 rounded-2" href="javascript:void(0);">
+              <img width="80" height="80" class="rounded-2" src="https://seve7.vn/wp-content/uploads/2023/05/7-2.jpg" />
+            </a>
+            <a class="thumbnail border mx-1 rounded-2" href="javascript:void(0);">
+              <img width="80" height="80" class="rounded-2" src="https://seve7.vn/wp-content/uploads/2023/05/3-2.jpg" />
+            </a>
+          </div>
+        </aside>
+
+        <main class="col-lg-6">
+          <div class="ps-lg-3">
+            <h4 class="title text-dark">
+            Chuột Logitech G502 X Plus Wireless RGB Gaming
+            </h4>
+            <div class="d-flex flex-row my-3">
+              <div class="text-warning mb-1 me-2">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="ms-1">
+                4.5
+                </span>
+              </div>
+              <span class="text-muted"><i class="fas fa-shopping-basket fa-sm mx-1"></i>Lượt mua: 154</span>
+              <span class="text-success ms-2">Tình trạng: Còn hàng</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="h5">3.190.000đ</span>
+            </div>
+
+            <p>
+              Logitech G502 X Plus Wireless RGB Gaming là một sự đột phá trong thế giới gaming không dây, mang đến cho
+              người chơi trải nghiệm đa dạng với hiệu suất đỉnh cao và ánh sáng RGB độc đáo.
+            </p>
+
+            <div class="row">
+              <dt class="col-3">Thương hiệu:</dt>
+              <dd class="col-9">Logitech</dd>
+
+              <dt class="col-3">Model:</dt>
+              <dd class="col-9">G502 X Plus Wireless</dd>
+
+              <dt class="col-3">Màu sắc:</dt>
+              <dd class="col-9">Trắng</dd>
+
+              <dt class="col-3">Bảo hành:</dt>
+              <dd class="col-9">12 tháng</dd>
+            </div>
+
+            <hr/>
+
+              <div class="col-md-4 col-6 mb-3">
+                <label class="mb-2 d-block">Số lượng</label>
+                <div class="input-group mb-3" style="width: 170px;">
+                  <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1"
+                    data-mdb-ripple-color="dark">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <input type="text" class="form-control text-center border border-secondary" placeholder="1"/>
+                  <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2"
+                    data-mdb-ripple-color="dark">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    var quantityInput = document.querySelector('.form-control'); 
+                      // Chọn input quantity
+                    document.getElementById('button-addon2').addEventListener('click', function () {
+                      // Tăng giá trị quantity khi nhấn nút tăng
+                      var currentQuantity = parseInt(quantityInput.value);
+                      if (currentQuantity === "" || isNaN(currentQuantity)) {
+                        currentQuantity = 1;
+                      }
+                      quantityInput.value = currentQuantity + 1;
+                    });
+                    document.getElementById('button-addon1').addEventListener('click', function () {
+                      // Giảm giá trị quantity khi nhấn nút giảm, nhưng không được giảm dưới 1
+                      var currentQuantity = parseInt(quantityInput.value);
+                      if (currentQuantity > 1) {
+                        quantityInput.value = currentQuantity - 1;
+                      }
+                    });
+                  });
+                </script>
+              </div>
+            <a href="#" class="btn btn-warning shadow-0"> Mua ngay </a>
+            <a href="#" class="btn btn-primary shadow-0"> Thêm vào giỏ </a>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+  <!-- content -->
+
+  <section class="bg-light border-top py-4">
+    <div class="container">
+      <div class="row gx-4">
+        <h5>Sản phẩm tương tự</h5>     
+        <div class="px-0 border shadow-0" style="display: flex;">
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <a href="#" class="d-block mb-3">
+                  <img src="https://seve7.vn/wp-content/uploads/2023/05/3-2.jpg" style="width: 100%; height: auto;" class="img-md img-thumbnail"/>
+                </a>
+                <div class="info">
+                  <a href="#" class="nav-link mb-1">Mouse high quality 1 <br/> Vip 1 <br/> 
+                    <strong class="text-dark">3.890.000đ</strong> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <a href="#" class="d-block mb-3">
+                  <img src="https://seve7.vn/wp-content/uploads/2023/05/3-2.jpg" style="width: 100%; height: auto;" class="img-md img-thumbnail"/>
+                </a>
+                <div class="info">
+                  <a href="#" class="nav-link mb-1">Mouse high quality 2 <br/> Vip 2 <br/> 
+                    <strong class="text-dark">2.950.000đ</strong> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-3">
+              <div class="card">
+                <div class="card-body">
+                  <a href="#" class="d-block mb-3">
+                    <img src="https://seve7.vn/wp-content/uploads/2023/05/3-2.jpg" style="width: 100%; height: auto;" class="img-md img-thumbnail"/>
+                  </a>
+                  <div class="info">
+                    <a href="#" class="nav-link mb-1">Mouse high quality 3 <br/> Vip 3 <br/> 
+                      <strong class="text-dark">2.950.000đ</strong> </a>
+                  </div>
+                </div>
+              </div>
+          </div>
+    
+          <div class="col-lg-3">
+              <div class="card">
+                <div class="card-body">
+                  <a href="#" class="d-block mb-3">
+                    <img src="https://seve7.vn/wp-content/uploads/2023/05/3-2.jpg" style="width: 100%; height: auto;" class="img-md img-thumbnail" />
+                  </a>
+                  <div class="info">
+                    <a href="#" class="nav-link mb-1">Mouse high quality 4 <br/> Vip 4 <br/> 
+                      <strong class="text-dark">1.500.000đ</strong> </a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Start chuyển ảnh
+    var thumbnails = document.querySelectorAll('.thumbnail');
+    thumbnails.forEach(function (thumbnail) {
+      thumbnail.addEventListener('click', function (event) {
+        event.preventDefault();
+        // Lấy URL ảnh từ thumbnail được click
+        var imageUrl = this.querySelector('img').src;
+        // Cập nhật URL ảnh vào ảnh chính
+        var mainImage = document.getElementById('mainImage');
+        mainImage.src = imageUrl;
+      });
+    });
+    // End chuyển ảnh
+  });
+</script>
+</html>
