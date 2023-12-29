@@ -1,3 +1,16 @@
+/* reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* bố cục web */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
 /* filter */
 .filter{
     display: flex;
