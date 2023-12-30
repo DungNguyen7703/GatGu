@@ -34,8 +34,6 @@
     cursor: pointer;
 }
 
-
-/* Định dạng khi hover */
 .filter-condition select:hover {
     border-color: #666; /* Màu viền khi di chuột vào */
 }
