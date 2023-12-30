@@ -5,7 +5,7 @@
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 50px;
     padding-bottom: 60px;
     font-size: 15px;
@@ -79,3 +79,24 @@ li {
     cursor: pointer;
     width: 100%;
 }
+
+.global-breadcrumb a {
+    color: #0077cc; 
+    text-decoration: none; 
+}
+
+.global-breadcrumb {
+    text-align: right;
+    padding-right: 20px; 
+    margin-top: 10px;
+  }
+
+.global-breadcrumb ol {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+
+  .global-breadcrumb li {
+    margin-right: 10px;
+  }
