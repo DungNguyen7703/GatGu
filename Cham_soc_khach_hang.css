@@ -11,18 +11,18 @@
     font-size: 15px;
 }
 
-h1 {
+.content-container h1.title {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
 }
 
-h2 {
+.content-container h2.title {
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-h3 {
+.content-container h3.title {
     font-size: 20px;
     margin-bottom: 20px;
 }
