@@ -1,100 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GatGuGamimgGear</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+	<title>Mega Menu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
-
 <body>
-  <nav>
-    <div class="wrapper">
-      <div class="logo"><a href="#"><img src="E:\web\demo\GG.png"></a></div>
-      <input type="radio" name="slider" id="menu-btn">
-      <input type="radio" name="slider" id="close-btn">
-      <ul class="nav-links">
-        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-        <li><a href="#">Trang Chủ</a></li>
-        <li><a href="#">Giới thiệu</a></li>
-        <li>
-          <a href="#" class="desktop-item Dropdown" onmouseenter="changeNavColorHoverIn" onmouseleave="resetNavColorHoverOut">Sản Phẩm</a>
-          <input type="checkbox" id="showMega">
-          <label for="showMega" class="mobile-item">Sản Phẩm</label>
-          <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <header>Sản Phẩm </header>
-                <ul class="mega-links">
-                  <li><a href="#">Bàn Phím</a></li>
-                  <li><a href="#">Chuột</a></li>
-                  <li><a href="#">Tay Cầm</a></li>
-                  <li><a href="#">Tai Nghe</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <img src="E:\web\demo\photos\AKKO-3098S--(1).jpg" alt="">
-              </div>
-              <div class="row">
-                <img src="E:\web\demo\photos\tai-nghe-gaming-corsair-hs50-pro-xzone-dong-nai-800x800.webp" alt="">
-              </div>
-              <div class="row">
-                <img src="E:\web\demo\photos\dualsense-ps5-controller-colours-guide.webp">
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <a href="#" class="desktop-item">Hỗ Trợ </a>
-          <input type="checkbox" id="showDrop"> 
-          <label for="showDrop" class="mobile-item">Hỗ Trợ</label>
-          <ul class="drop-menu">
-            <li><a href="#">Hướng dẫn mua hàng trực tuyến</a></li>
-            <li><a href="#">Hướng dẫn thanh toán</a></li>
-            <li><a href="#">CSKH</a></li>
-            <li><a href="#">Drop menu 4</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Liên Hệ</a></li>
-      </ul>
-      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
-      <i class='fas fa-shopping-cart'></i>
-    </div>
-  </nav>
+ 
+ <!-- header start -->
+ <header class="header">
+ 	<div class="container">
+ 		<div class="row v-center">
+ 			<div class="header-item item-left">
+ 				<div class="logo">
+ 					<a href="#"><img src="E:\web\demo\header\photos\GG.png"></a>
+ 				</div>
+ 			</div>
+ 			<!-- menu start here -->
+ 			<div class="header-item item-center">
+ 				<div class="menu-overlay">
+ 				</div>
+ 				<nav class="menu">
+ 					<div class="mobile-menu-head">
+ 						<div class="go-back"><i class="fa fa-angle-left"></i></div>
+ 						<div class="current-menu-title"></div>
+ 						<div class="mobile-menu-close">&times;</div>
+ 					</div>
+ 					<ul class="menu-main">
+ 						<li>
+ 							<a href="#">Trang Chủ</a>
+ 						</li>
+ 						<li class="menu-item-has-children">
+ 							<a href="#">Sản Phẩm <i class="fa fa-angle-down"></i></a>
+ 							<div class="sub-menu mega-menu mega-menu-column-4">
+                               <div class="list-item">
+                               	  <h4 class="title">GamingGear</h4>
+                               	  <ul>
+                               	  	 <li><a href="#">Bàn Phím</a></li>
+                               	  	 <li><a href="#">Chuột</a></li>
+                               	  	 <li><a href="#">Tai Nghe</a></li>
+                               	  	 <li><a href="#">Tay Cầm</a></li>
+                               	  </ul>
+                               </div>
+                               <div class="list-item">
+								<img src="E:\web\demo\photos\dualsense-ps5-controller-colours-guide.webp" alt="shop">
+                               </div>
+                               <div class="list-item">
+								<img src="E:\web\demo\photos\maxresdefault.jpg">
+                               </div>
+                               <div class="list-item">
+                               	 <img src="img/shop1.jpg" alt="shop">
+                               </div>
+ 							</div>
+ 						</li>
 
-  <script>
-    $(document).ready(function () {
-      // Hover in
-      $('.Dropdown').on('mouseenter', function () {
-        // Gọi hàm khi di chuột vào
-        changeNavColorHoverIn();
-      });
-      // Hover out
-      $('.Dropdown').on('mouseleave', function () {
-        // Gọi hàm khi di chuột ra
-        resetNavColorHoverOut();
-      });
-    });
-    function changeNavColorHoverIn() {
-      // Thực hiện các thay đổi khi di chuột vào
-      $('.desktop-item .Dropdown').css('background-color', '#fefefe');
-    }
+ 						<li class="menu-item-has-children">
+ 							<a href="#">Pages <i class="fas fa-angle-down"></i></a>
+ 							<div class="sub-menu single-column-menu">
+ 								<ul>
+ 									<li><a href="#">Login</a></li>
+ 									<li><a href="#">Register</a></li>
+ 									<li><a href="#">Faq</a></li>
+ 									<li><a href="#">404 Page</a></li>
+ 								</ul>
+ 							</div>
+ 						</li>
+						 <li class="menu-item-has-children">
+							<a href="#">Hỗ Trợ <i class="fa fa-angle-down"></i></a>
+							<div class="sub-menu single-column-menu">
+								<ul>
+									 <li><a href="#">Hướng dẫn thanh toán</a></li>
+									 <li><a href="#">Hướng dẫn mua hàng online</a></li>
+									 <li><a href="#">Tai Nghe</a></li>
+									 <li><a href="#">Tay Cầm</a></li>
+								</ul>
 
-    function resetNavColorHoverOut() {
-      // Thực hiện các thay đổi khi di chuột ra
-      $('.desktop-item .Dropdown').css('background-color', 'linear-gradient(to bottom, rgb(60, 65, 68), rgb(23, 29, 33))');
-    }
 
-  </script>
+						</li>
+ 						<li>
+ 							<a href="#">Liên Hệ</a>
+ 						</li>
+ 					</ul>
+ 				</nav>
+ 			</div>
+ 			<!-- menu end here -->
+ 			<div class="header-item item-right">
+ 				<a href="#"><i class="fas fa-search"></i></a>
+ 				<a href="#"><i class="fas fa-shopping-cart"></i></a>
+ 				<!-- mobile menu trigger -->
+ 				<div class="mobile-menu-trigger">
+ 					<span>0934650998</span>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </header>
+ <!-- header end -->
 
-  <div class="">
-
-  </div>
 
 </body>
-
 </html>
+
+
+
