@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="catalog_style.css">
+    <link rel="stylesheet" href="assets\css\catalog_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
@@ -11,22 +11,14 @@
   <!-- danh mục sp   -->
 <div class="container">
     <div class="product-list">
-            <div class="filter"> 
-                <div class="select">
-                    <span class="select-name">
-                        Lọc
-                    </span>
-                    <i class="fa fa-light fa-chevron-down"></i>
-                    <ul class="choice">
-                        <li class="choice-name">
-                            <a href="#">Giá giảm dần</a>
-                        </li>
-                        <li class="choice-name">
-                            <a href="#">Giá tăng dần</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="filter-condition">
+            <span>Price</span>
+            <select name="" id="select">
+                <option value="Default">Default</option>
+                <option value="LowToHigh">Low to high</option>
+                <option value="HighToLow">High to low</option>
+            </select>
+        </div>
             <div class="catalogue">
                 <div class="list">
                     <div class="item">
@@ -216,5 +208,6 @@
     </div>  
 </div>
 <script src="catalog.js"></script>
+<script src="filter.js"></script>
 </body>
 </html>
