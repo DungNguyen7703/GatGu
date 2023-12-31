@@ -10,6 +10,154 @@
 </head>
 
 <body>
+     <!-- header start -->
+  <header class="header">
+    <div class="container">
+      <div class="row v-center">
+        <div class="header-item item-left">
+          <div class="logo">
+            <a href="#"><img src="photos/GG.png"></a>
+          </div>
+        </div>
+        <!-- menu start here -->
+        <div class="header-item item-center">
+          <div class="menu-overlay">
+          </div>
+          <nav class="menu">
+            <div class="mobile-menu-head">
+              <div class="go-back"><i class="fa fa-angle-left"></i></div>
+              <div class="current-menu-title"></div>
+              <div class="mobile-menu-close">&times;</div>
+            </div>
+            <ul class="menu-main">
+              <li>
+                <a href="#">Trang Chủ</a>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Sản Phẩm <i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu mega-menu mega-menu-column-4">
+                  <div class="list-item">
+                    <h4 class="title">GamingGear</h4>
+                    <ul>
+                      <li><a href="#">Bàn Phím</a></li>
+                      <li><a href="catalog_mouse.html">Chuột</a></li>
+                      <li><a href="#">Tai Nghe</a></li>
+                      <li><a href="#">Tay Cầm</a></li>
+                    </ul>
+                  </div>
+                  <div class="list-item">
+                    <img src="photos/maxresdefault.jpg" alt = "ảnh">
+                  </div>
+                  <div class="list-item">
+                    <img src="photos/R.jpeg" alt="ảnh">
+                  </div>
+                  <div class="list-item">
+                    <img src="photos/taycam.webp" alt="ảnh">
+                  </div>
+                </div>
+              </li>
+
+              <li class="menu-item-has-children">
+                <a href="#">Pages <i class="fas fa-angle-down"></i></a>
+                <div class="sub-menu single-column-menu">
+                  <ul>
+                    <li><a href="login.html">Đăng Nhập</a></li>
+                    <li><a href="#">Đăng kí</a></li>
+                    <li><a href="gop-y-khieu-nai.html">Hỏi đáp</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Hỗ Trợ <i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu single-column-menu">
+                  <ul>
+                    <li><a href="huong-dan-thanh-toan.html">Hướng dẫn thanh toán</a></li>
+                    <li><a href="huong-dan-mua-hang-truc-tuyen.html">Hướng dẫn mua hàng online</a></li>
+                    <li><a href="Cham_soc_khach_hang.html">Chăm sóc khách hàng</a></li>
+                    <li><a href="BẢO MẬT THÔNG TIN KHÁCH HÀNG.html">Bảo mật thông tin</a></li>
+                  </ul>
+
+
+              </li>
+              <li>
+                <a href="#">Liên Hệ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- menu end here -->
+        <div class="header-item item-right">
+          <a href="#"><i class="fas fa-search"></i></a>
+          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+          <!-- mobile menu trigger -->
+          <div class="mobile-menu-trigger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+<script>
+   const menu = document.querySelector(".menu");
+ const menuMain = menu.querySelector(".menu-main");
+ const goBack = menu.querySelector(".go-back");
+ const menuTrigger = document.querySelector(".mobile-menu-trigger");
+ const closeMenu = menu.querySelector(".mobile-menu-close");
+ let subMenu;
+ menuMain.addEventListener("click", (e) =>{
+ 	if(!menu.classList.contains("active")){
+ 		return;
+ 	}
+   if(e.target.closest(".menu-item-has-children")){
+   	 const hasChildren = e.target.closest(".menu-item-has-children");
+      showSubMenu(hasChildren);
+   }
+ });
+ goBack.addEventListener("click",() =>{
+ 	 hideSubMenu();
+ })
+ menuTrigger.addEventListener("click",() =>{
+ 	 toggleMenu();
+ })
+ closeMenu.addEventListener("click",() =>{
+ 	 toggleMenu();
+ })
+ document.querySelector(".menu-overlay").addEventListener("click",() =>{
+ 	toggleMenu();
+ })
+ function toggleMenu(){
+ 	menu.classList.toggle("active");
+ 	document.querySelector(".menu-overlay").classList.toggle("active");
+ }
+ function showSubMenu(hasChildren){
+    subMenu = hasChildren.querySelector(".sub-menu");
+    subMenu.classList.add("active");
+    subMenu.style.animation = "slideLeft 0.5s ease forwards";
+    const menuTitle = hasChildren.querySelector("i").parentNode.childNodes[0].textContent;
+    menu.querySelector(".current-menu-title").innerHTML=menuTitle;
+    menu.querySelector(".mobile-menu-head").classList.add("active");
+ }
+
+ function  hideSubMenu(){  
+    subMenu.style.animation = "slideRight 0.5s ease forwards";
+    setTimeout(() =>{
+       subMenu.classList.remove("active");	
+    },300); 
+    menu.querySelector(".current-menu-title").innerHTML="";
+    menu.querySelector(".mobile-menu-head").classList.remove("active");
+ }
+ 
+ window.onresize = function(){
+ 	if(this.innerWidth >991){
+ 		if(menu.classList.contains("active")){
+ 			toggleMenu();
+ 		}
+
+ 	}
+ }
+</script>
+
     <div class="container">
     <div class="login">
     <form class="my-form">
