@@ -10,6 +10,10 @@ body {
 	font-family: 'Roboto';
 }
 /* header */
+.container1{
+	max-width: 1200px;
+	margin:auto;
+}
 
 .header{
 	display: block;
