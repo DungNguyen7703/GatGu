@@ -16,10 +16,12 @@
 }
 html {
 	scroll-behavior: smooth;
+    font-size: larger;
 }
 body {
     line-height: 1.5;
 	font-family: 'Roboto';
+    background-color: #fefefe;
 }
 ul {
 	list-style-type: none;
@@ -398,15 +400,6 @@ a {
 	}
 }
 
-.carousel-item {
-	height: 800px;
-  }
-  .carousel-item img {
-	height: 100%;
-	object-fit: cover;
-	filter: brightness(0.6);
-  }
-
 /* bố cục web */
 .container {
     width: 80%;
@@ -444,7 +437,7 @@ a {
 /* product */
 .catalogue{
     padding: 50px 50px 0;
-    background-color: #ea4636;
+    background-color:  #95a5a6 ;
     border-radius: 20px;
 }
 
@@ -464,13 +457,13 @@ a.detail {
 }
 
 .item .img img{
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     transition: 0.5s;
     border-radius: 40px;
 }
 .item .img{
-    background-color: rgb(51, 0, 255);
+    background-color: #7f8c8d;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -501,7 +494,7 @@ a.detail {
     font-size: large;
     letter-spacing: 3px;
     margin-bottom:10px;
-    color: red;
+    color: #ea4636;
     font-weight: bolder;
     text-align: center; 
     padding-bottom: 10px;
@@ -515,7 +508,7 @@ a.detail {
     border-radius: 30px;
     cursor: pointer;
 }
-.item:hover img{
+.img:hover img{
     transform: translate(0,-60px);
 }
 
