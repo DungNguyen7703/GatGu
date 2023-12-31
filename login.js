@@ -7,8 +7,8 @@ loginForm.addEventListener("submit", (e) => {
 
   console.log("Email:", email.value);
   console.log("Password:", password.value);
-  // process and send to API
-  window.location.href = 'index (1).html'; 
+
+  window.location.href = 'index.html'; 
 
   // Hiển thị thông báo đăng nhập thành công
   window.alert('Đăng nhập thành công!');
