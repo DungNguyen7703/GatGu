@@ -34,8 +34,9 @@
     cursor: pointer;
 }
 
+
 .filter-condition select:hover {
-    border-color: #666; /* Màu viền khi di chuột vào */
+    border-color: #666; 
 }
 
 /* product */
@@ -44,10 +45,15 @@
     background-color: #1b8fbc;
     border-radius: 20px;
 }
+
+.item {
+    width: 100;
+}
+
 .list{
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 20px;
 }
 
@@ -103,7 +109,7 @@ a.detail {
     padding:20px;
     color:#fff;
     width:100%;
-    border: none;
+    border:none;
     border-radius: 30px;
     cursor: pointer;
 }
@@ -137,19 +143,25 @@ a.detail {
     color:#fff;
 }
 
-@media (max-width: 768px) {
+/* Reponsive */
+
+/* Mobile */
+@media (max-width: 739px) {
+
     .list{
         grid-template-columns: repeat(1, 1fr);
     }
+
     .item .img img{
-        width: 75%;
-        height: 75%;
+        width: 50%;
+        height: 50%;
     }
 
     .catalogue {
         padding: 0;
     }
 }
+
       
 
 
