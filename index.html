@@ -94,7 +94,7 @@
         </div>
         <!-- menu end here -->
         <div class="header-item item-right">
-          <a href="timkiem.html"><i class="fas fa-search"></i></a>
+          <i class="fas fa-search"></i>
           <a href="giohang.html"><i class="fas fa-shopping-cart"></i></a>
           <!-- mobile menu trigger -->
           <div class="mobile-menu-trigger">
@@ -255,9 +255,9 @@
   </div>
   <div class="sanpham">
    
-    <a href=""><img src="/" alt=""></a>
-     <h3>Logitech G102 LightSync</h3>
-    <h6>950.000đ</h6>
+    <a href=""><img src="photos/tai nghe/Tai nghe không dây Razer Barracuda X/1.webp" alt=""></a>
+     <h3>Razer Barracuda X</h3>
+    <h6>2.300.000</h6>
     <button class="buy">Mua Ngay</button>
   </div>
 </div>
@@ -503,6 +503,27 @@
     prevEl: '.swiper-button-prev',
   }
 });
+  </script>
+  <script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = "";
+      } else {
+        a[i].style.display = "none";
+      }
+    }
+  }
   </script>
 </body>
 <footer class="bg text-dark pt-4">
