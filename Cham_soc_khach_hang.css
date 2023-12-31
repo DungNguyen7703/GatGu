@@ -85,6 +85,22 @@ li {
     width: 100%;
 }
 
+  .contact {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.google-map {
+    flex: 1;
+}
+
 .formlh {
     display: grid;
     gap: 10px;
