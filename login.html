@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+    <div class="login">
+    <form class="my-form">
+        <div class="login-welcome-row">
+            <a href="#" title="Logo">
+                <img src="GG.png" alt="Logo" class="logo">
+            </a>
+            <div class="title_login">Đăng nhập tài khoản</div>
+        </div>
+        <div class="input_type">
+            <input type="email" id="email" name="email" class="input_typing" placeholder="Your Email" required>
+            <label for="email" class="input_label">Email:</label>            
+            <i class="fa-solid fa-at input_icon"></i>
+        </div>
+        <div class="input_type">
+            <input id="password" type="password" class="input_typing" placeholder="Your Password"
+                title="Minimum 6 characters at least 1 Alphabet and 1 Number"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" required>
+            <label for="password" class="input_label">
+                Mật khẩu:
+            </label>
+            <i class="fa-solid fa-lock input_icon"></i>
+        </div>
+        <button type="submit" class="my-form_button">
+            Đăng nhập
+        </button>
+        <div class="socials-row">
+            <a href="#" title="Use Google">
+                <img src="google.png" alt="Google">
+                Đăng nhập Google
+            </a>
+        </div>
+        <div class="no_acc">
+            <div class="no_acc_ques">
+                <span>Bạn chưa có tài khoản?</span>
+                <a href="#" title="Create Account">
+                    Đăng ký
+                </a>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+    <script src="login.js"></script>
+</body>
+
+</html>

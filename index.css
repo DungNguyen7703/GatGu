@@ -595,3 +595,38 @@ html, body {
   box-shadow: none;
   transform: translateY(0);
 }
+
+      .list-unstyled a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+
+        footer h5 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #666;
+        }
+
+        footer ul li {
+            line-height: 1.6;
+            padding: 3px 0;
+        }
+
+        footer .social-links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #333;
+            font-size: 1.2em;
+        }
