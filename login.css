@@ -6,8 +6,26 @@
 }
 
 body {
-    background-color: black;
     font-family: "Roboto";
+}
+.container{
+	max-width: 1200px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.v-center{
+	align-items: center;
+}
+ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
 }
 /* header */
 
@@ -374,9 +392,11 @@ body {
 	filter: brightness(0.6);
   }
 
+
 .container {
     width: 80%;
     margin: auto;
+	background-color: #fefefe;
 }
 
 .socials-row img {
@@ -421,6 +441,7 @@ body {
     margin: 50px;
     display: flex;
     justify-content: center;
+
 }
 
 .my-form {
@@ -431,6 +452,8 @@ body {
     padding: 30px;
     border-radius: 30px;
     width: 400px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
 }
 
 .my-form_button {

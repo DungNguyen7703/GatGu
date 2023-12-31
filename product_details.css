@@ -5,6 +5,25 @@ body {
 	font-weight: 400;
 	overflow-x: hidden;
 }
+.container{
+	max-width: 1200px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.v-center{
+	align-items: center;
+}
+ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
 /* header */
 
 .header{
@@ -361,11 +380,114 @@ body {
 	}
 }
 
-.carousel-item {
-	height: 800px;
+/* footer */
+.list-unstyled a {
+	color: #000;
+	text-decoration: none;
   }
-  .carousel-item img {
-	height: 100%;
-	object-fit: cover;
-	filter: brightness(0.6);
+  
+  footer {
+	background-color: #f8f9fa;
+	padding: 20px 0;
+	font-size: 0.9em;
+  }
+  
+  footer h5 {
+	color: #333;
+	margin-bottom: 15px;
+  }
+  
+  footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	color: #666;
+  }
+  
+  footer ul li {
+	line-height: 1.6;
+	padding: 3px 0;
+  }
+  
+  footer .social-links a {
+	display: inline-block;
+	margin-right: 10px;
+	color: #333;
+	font-size: 1.2em;
+  }
+  .feature {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+  }
+  .feature h3 { 
+	text-align: center;
+	font-size: 30px;
+	margin: 0;
+	padding-top: 10px;
+  }
+  .sanpham {
+	width: 12%;
+	margin: 15px;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	padding-top: 10px;
+	box-shadow: 0 14px 28px rgba(0,0, 0, 0.25),0 10px 10px rgba(0,0, 0 , 0.22);
+	transition: .4s;
+	background: #f2f2f2;
+  }
+  .sanpham:hover img {
+	transform: scale(1.2);
+  }
+  .sanpham img { 
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	display: block;
+	padding: 0 8px;
+	border-radius: 20px;
+	transition: transform 0.3s ease; /* thêm hiệu ứng chuyển động */
+  
+  }
+  .sanpham h6 { 
+	font-size: 26px;
+	text-align: center;
+	color: #222f3e;
+	margin: 0;
+  }
+  .sanpham button {
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	width: 100%;
+	padding: 15px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	margin-top: 5px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+  }
+  .sanpham button:hover {
+	color: #3498db;
+  }
+  .buy {
+	background-color:  #ec994b;;
+  }
+  @media (max-width: 1000px){
+	.sanpham {
+	  width: 45px;
+	}
+  }
+  @media (max-width:750px) {
+	.sanpham {
+	  width: 100%;
+	}
   }
