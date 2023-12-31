@@ -1,4 +1,4 @@
-<script>
+
 function validateEmail() {
     var emailInput = document.getElementById("emailInput").value;
     var emailRegex = /^[a-zA-Z0-9]+@gmail\.com$/;
@@ -8,4 +8,3 @@ function validateEmail() {
         alert(" Bạn đã đăng ký thành công");
     }
 }
-</script>
