@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> CHĂM SÓC KHÁCH HÀNG </title>
+  <link rel="icon" href="photos/GG.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Nhapemail.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="Cham_soc_khach_hang.css">
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="header">
+    <div class="container">
+      <div class="row v-center">
+        <div class="header-item item-left">
+          <div class="logo">
+            <a href="index.html"><img src="photos/GG.png"></a>
+          </div>
+        </div>
+        <!-- menu start here -->
+        <div class="header-item item-center">
+          <div class="menu-overlay">
+          </div>
+          <nav class="menu">
+            <div class="mobile-menu-head">
+              <div class="go-back"><i class="fa fa-angle-left"></i></div>
+              <div class="current-menu-title"></div>
+              <div class="mobile-menu-close">&times;</div>
+            </div>
+            <ul class="menu-main">
+              <li>
+                <a href="index.html">Trang Chủ</a>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Sản Phẩm <i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu mega-menu mega-menu-column-4">
+                  <div class="list-item">
+                    <h4 class="title">GamingGear</h4>
+                    <ul>
+                      <li><a href="banphim.html">Bàn Phím</a></li>
+                      <li><a href="catalog_mouse.html">Chuột</a></li>
+                      <li><a href="tainghe.html">Tai Nghe</a></li>
+                      <li><a href="taycam.html">Tay Cầm</a></li>
+                    </ul>
+                  </div>
+                  <div class="list-item">
+                    <img src="photos/maxresdefault.jpg" alt = "ảnh">
+                  </div>
+                  <div class="list-item">
+                    <img src="photos/R.jpeg" alt="ảnh">
+                  </div>
+                  <div class="list-item">
+                    <img src="photos/taycam.webp" alt="ảnh">
+                  </div>
+                </div>
+              </li>
+
+              <li class="menu-item-has-children">
+                <a href="#">Pages <i class="fas fa-angle-down"></i></a>
+                <div class="sub-menu single-column-menu">
+                  <ul>
+                    <li><a href="login.html">Đăng Nhập</a></li>
+                    <li><a href="dangki.html">Đăng kí</a></li>
+                    <li><a href="gop-y-khieu-nai.html">Hỏi đáp</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Hỗ Trợ <i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu single-column-menu">
+                  <ul>
+                    <li><a href="huong-dan-thanh-toan.html">Hướng dẫn thanh toán</a></li>
+                    <li><a href="huong-dan-mua-hang-truc-tuyen.html">Hướng dẫn mua hàng online</a></li>
+                    <li><a href="Cham_sic_khach_hang.html">Chăm sóc khách hàng</a></li>
+                    <li><a href="BẢO MẬT THÔNG TIN KHÁCH HÀNG.html">Bảo mật thông tin</a></li>
+                  </ul>
+
+
+              </li>
+              <li>
+                <a href="lienhe.html">Liên Hệ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- menu end here -->
+        <div class="header-item item-right">
+          <a href="timkiem.html"><i class="fas fa-search"></i></a>
+          <a href="giohang.html"><i class="fas fa-shopping-cart"></i></a>
+          <!-- mobile menu trigger -->
+          <div class="mobile-menu-trigger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+<script>
+   const menu = document.querySelector(".menu");
+ const menuMain = menu.querySelector(".menu-main");
+ const goBack = menu.querySelector(".go-back");
+ const menuTrigger = document.querySelector(".mobile-menu-trigger");
+ const closeMenu = menu.querySelector(".mobile-menu-close");
+ let subMenu;
+ menuMain.addEventListener("click", (e) =>{
+ 	if(!menu.classList.contains("active")){
+ 		return;
+ 	}
+   if(e.target.closest(".menu-item-has-children")){
+   	 const hasChildren = e.target.closest(".menu-item-has-children");
+      showSubMenu(hasChildren);
+   }
+ });
+ goBack.addEventListener("click",() =>{
+ 	 hideSubMenu();
+ })
+ menuTrigger.addEventListener("click",() =>{
+ 	 toggleMenu();
+ })
+ closeMenu.addEventListener("click",() =>{
+ 	 toggleMenu();
+ })
+ document.querySelector(".menu-overlay").addEventListener("click",() =>{
+ 	toggleMenu();
+ })
+ function toggleMenu(){
+ 	menu.classList.toggle("active");
+ 	document.querySelector(".menu-overlay").classList.toggle("active");
+ }
+ function showSubMenu(hasChildren){
+    subMenu = hasChildren.querySelector(".sub-menu");
+    subMenu.classList.add("active");
+    subMenu.style.animation = "slideLeft 0.5s ease forwards";
+    const menuTitle = hasChildren.querySelector("i").parentNode.childNodes[0].textContent;
+    menu.querySelector(".current-menu-title").innerHTML=menuTitle;
+    menu.querySelector(".mobile-menu-head").classList.add("active");
+ }
+
+ function  hideSubMenu(){  
+    subMenu.style.animation = "slideRight 0.5s ease forwards";
+    setTimeout(() =>{
+       subMenu.classList.remove("active");	
+    },300); 
+    menu.querySelector(".current-menu-title").innerHTML="";
+    menu.querySelector(".mobile-menu-head").classList.remove("active");
+ }
+ 
+ window.onresize = function(){
+ 	if(this.innerWidth >991){
+ 		if(menu.classList.contains("active")){
+ 			toggleMenu();
+ 		}
+
+ 	}
+ }
+</script>
+
+<div class="content-container">
+    <h1 class="title"> CHĂM SÓC KHÁCH HÀNG </h1> 
+    <h2 class="title">Hỗ trợ Khách hàng</h2>
+    <p>Tại Gật Gù, chúng tôi không chỉ đơn thuần cung cấp sản phẩm mà còn cam kết tới trải nghiệm mua sắm và dịch vụ chăm sóc khách hàng đẳng cấp. Hãy cùng khám phá chi tiết và cam kết chúng tôi mang lại trong hành trình mua sắm của bạn:</p>
+
+    <h3 class="title">Chăm sóc Tận Tâm</h3>
+    <p>Đội ngũ Chăm sóc Khách hàng của Gật Gù không chỉ là những nhân viên, họ là những người đam mê với sản phẩm và tận tâm trong mỗi giao dịch. Chúng tôi không chỉ giải quyết vấn đề của bạn, mà còn muốn đảm bảo bạn có trải nghiệm mua sắm thoải mái và đầy đủ sự hài lòng. Họ sẵn sàng lắng nghe mọi ý kiến và cung cấp sự hỗ trợ một cách tận tâm nhất để đảm bảo bạn cảm thấy hài lòng với lựa chọn của mình.</p>
+
+    <h3 class="title">Đội Ngũ Chuyên Nghiệp</h3>
+    <p>Chúng tôi tự hào về đội ngũ Chăm sóc Khách hàng chuyên nghiệp và được đào tạo kỹ lưỡng. Mỗi thành viên đều có kiến thức sâu rộng về sản phẩm và dịch vụ của chúng tôi. Không chỉ là những nhân viên, họ là những người tư vấn chuyên nghiệp sẵn sàng hỗ trợ bạn trong quá trình mua sắm. Họ không chỉ cung cấp thông tin chính xác, mà còn đồng hành với bạn từng bước trên hành trình chọn lựa sản phẩm phù hợp.</p>
+
+    <h3 class="title">Phản Hồi và Góp Ý</h3>
+    <p>Chúng tôi đánh giá cao mọi ý kiến đóng góp từ phía khách hàng. Phản hồi của bạn không chỉ giúp chúng tôi cải thiện, mà còn là nguồn động viên lớn nhất cho đội ngũ chúng tôi. Mỗi góp ý được xem xét cẩn thận, và chúng tôi cam kết thực hiện những thay đổi tích cực để nâng cao trải nghiệm của bạn. Chúng tôi cũng tạo cơ hội để bạn chia sẻ trực tiếp những ý kiến của mình thông qua các buổi thảo luận và khảo sát, tạo nên sự giao tiếp mở cửa giữa Gật Gù và cộng đồng.</p>
+
+    <h3 class="title">Kênh Liên Lạc</h3>
+    <p>Liên lạc là chìa khóa chính trong quá trình hỗ trợ khách hàng. Chúng tôi cung cấp nhiều kênh liên lạc, từ điện thoại, email đến các mạng xã hội, để bạn dễ dàng kết nối với chúng tôi. Chúng tôi đảm bảo mọi thông tin và câu hỏi của bạn được xử lý nhanh chóng và chính xác nhất. Nếu bạn muốn có cuộc trò chuyện trực tiếp, dịch vụ trò chuyện trực tuyến của chúng tôi sẽ mang lại trải nghiệm tương tác trực quan và nhanh chóng.</p>
+
+    <h3 class="title">Cam Kết Hài Lòng Khách Hàng</h3>
+    <p>Cam kết hài lòng khách hàng không chỉ là lời hứa, mà là tầm nhìn và sứ mệnh của chúng tôi. Nếu có bất kỳ vấn đề nào xuất hiện trong quá trình mua sắm, chúng tôi sẽ không ngừng nỗ lực để đảm bảo bạn nhận được sự hỗ trợ tốt nhất. Điều này có thể thông qua việc đổi trả linh hoạt, hoàn tiền nhanh chóng, hoặc các biện pháp khác để duy trì niềm tin và sự hài lòng từ phía bạn. Chúng tôi tin rằng mỗi góp ý và trải nghiệm của bạn là cơ hội để chúng tôi liên tục hoàn thiện và không ngừng nâng cao chất lượng dịch vụ.</p>
+</div>
+
+
+<div class="subscribe-section">
+    <h3 >NHẬN TIN KHUYẾN MÃI <i class="fas fa-envelope"></i></h3>
+    <p>Bạn vui lòng để lại Email để nhận thông tin khuyến mãi từ GẬT GÙ</p>
+    <div class="subscribe-form">
+        <input type="email" id="emailInput" placeholder="GatGu@gmail.com">
+        <button type="button" onclick="validateEmail()">Đăng ký</button>
+    </div>
+</div>  
+</body>
+<footer class="bg text-dark pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5>GẬT GÙ</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-geo-alt-fill"></i> Số 15 Yên Lãng, Phường Trung Liệt, Quận Đống Đa, Hà Nội</li>
+                    <li><i class="bi bi-telephone-fill"></i> 0349296461</li>
+                    <li><i class="bi bi-envelope-fill"></i> gatgushop@gmail.com</li>
+                </ul>
+                <div class="social-links">
+                    <!-- Icons for Facebook, Instagram, TikTok, Mail, YouTube -->
+                    <a href="https://www.facebook.com/profile.php?id=61554448677341" class="bi bi-facebook"></a>
+                    <a href="https://www.instagram.com/gatgu.gaming?fbclid=IwAR2HdWT6jkR702KNcI7teqHL1ipUQiDE3_h1H_ii9x_APmvpKk0c9Nplmmc" class="bi bi-instagram"></a>
+                    <a href="https://www.tiktok.com/@gat_gu?is_from_webapp=1&sender_device=pc" class="bi bi-tiktok"></a>
+                    <a href="mailto:tuhpdef@gmail.com" class="bi bi-envelope"></a>
+                    <a href="https://www.youtube.com/@gatgugaming" class="bi bi-youtube"></a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5>HỖ TRỢ KHÁCH HÀNG</h5>
+                <ul class="list-unstyled">
+                    <li> <a href="huong-dan-mua-hang-truc-tuyen.html">Hướng dẫn mua hàng trực tuyến</a></li>
+                    <li> <a href="huong-dan-thanh-toan.html">Hướng dẫn thanh toán</a> </li>
+                    <li> <a href="gop-y-khieu-nai.html">Góp ý, Khiếu Nại</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>CHÍNH SÁCH CHUNG</h5>
+                <ul class="list-unstyled">
+                    <li> <a href="Chính sách, quy định chung.html">Chính sách, quy định chung</a></li>
+                    <li> <a href="Chính sách vận chuyển.html">Chính sách vận chuyển</a></li>
+                    <li> <a href="Chính sách bảo hành.html">Chính sách bảo hành</a></li>
+                    <li> <a href="Chính sách đổi trả và hoàn tiền.html">Chính sách đổi trả và hoàn tiền</a></li>
+                    <li> <a href="Chính sách xử lý khiếu nại.html">Chính sách xử lý khiếu nại</a></li>
+                    <li> <a href="BẢO MẬT THÔNG TIN KHÁCH HÀNG.html">Bảo mật thông tin khách hàng</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>FANPAGE FACEBOOK</h5>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F61554448677341%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="340" height="135" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
+                <!-- Embed Facebook Page Plugin code here -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
