@@ -1,10 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-body {
-  line-height: 1.5;
-	font-family: 'Roboto';
-	font-weight: 400;
-	overflow-x: hidden;
+/* reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+    line-height: 1.5;
+	font-family: 'Roboto';
+}
+ul {
+	list-style-type: none;
+}
+/* header */
 .container1{
 	max-width: 1200px;
 	margin:auto;
@@ -16,16 +36,14 @@ body {
 .v-center{
 	align-items: center;
 }
-ul{
+ul {
 	list-style: none;
 	margin:0;
 	padding:0;
 }
-a{
+a {
 	text-decoration: none;
 }
-/* header */
-
 .header{
 	display: block;
 	width: 100%;
@@ -133,14 +151,14 @@ a{
   flex:0 0 25%;
   padding:0 15px;
 }
-.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item .title{
+.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item .title1{
 	font-size: 16px;
 	color:#ea4636;
 	font-weight: 500;
 	line-height: 1;
 	padding:10px 0;
 }
-.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center .title{
+.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center .title1{
 	text-align: center;
 }
 .header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item img{
@@ -345,10 +363,10 @@ a{
 	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item img{
 		margin-top:0;
 	}
-	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center .title{
+	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center .title1{
 		margin-bottom: 20px;
 	}
-	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center:last-child .title{
+	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center:last-child .title1{
 		margin-bottom:0px;
 	}
 	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item{
@@ -380,6 +398,178 @@ a{
 	}
 }
 
+.carousel-item {
+	height: 800px;
+  }
+  .carousel-item img {
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(0.6);
+  }
+
+/* bố cục web */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* filter */
+.filter-condition{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.filter-condition select {
+    margin: 0px 20px;
+    padding: 8px 0;
+    font-size: 14px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;    
+    width: 150px; 
+    outline: none; 
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.filter-condition select:hover {
+    border-color: #666; 
+}
+
+/* product */
+.catalogue{
+    padding: 50px 50px 0;
+    background-color: #ea4636;
+    border-radius: 20px;
+}
+
+.item {
+    width: 100;
+}
+
+.list{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 20px;
+}
+
+a.detail {
+    text-decoration: none;
+}
+
+.item .img img{
+    height: 200px;
+    width: 200px;
+    transition: 0.5s;
+    border-radius: 40px;
+}
+.item .img{
+    background-color: rgb(51, 0, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.item .content{
+    background-color: #ffffff24;
+    border-radius: 30px;
+    padding:50px 30px;
+    transform: translate(0,-50px);
+    backdrop-filter: blur(20px);
+}
+.title{
+    display: flex;
+    font-size: 20px;
+    padding: 10px 0;
+    height: 70px;
+    color: #000;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center; 
+}
+
+.item .content .price{
+    font-size: large;
+    letter-spacing: 3px;
+    margin-bottom:10px;
+    color: red;
+    font-weight: bolder;
+    text-align: center; 
+    padding-bottom: 10px;
+}
+.item .content .add{
+    background-color: #08d6ff;
+    padding:20px;
+    color:#fff;
+    width:100%;
+    border:none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.item:hover img{
+    transform: translate(0,-60px);
+}
+
+/* pagination */
+.listPage{
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+}
+.listPage li {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    background-color: #000000bd;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 50%; 
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    text-align: center; 
+    line-height: 35px; 
+    color: white; 
+}
+
+.listPage .active{
+    background-color: #5500ff;
+    color:#fff;
+}
+
+/* Reponsive */
+
+/* PC */
+@media (min-width: 1400px) {
+    .list{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+
+    .list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .item .img img{
+        width: 50%;
+        height: 50%;
+    }
+
+    .catalogue {
+        padding: 0;
+    }
+}
 /* footer */
 .list-unstyled a {
 	color: #000;
@@ -415,79 +605,10 @@ a{
 	color: #333;
 	font-size: 1.2em;
   }
-  .feature {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	margin: 0;
-  }
-  .feature h3 { 
-	text-align: center;
-	font-size: 30px;
-	margin: 0;
-	padding-top: 10px;
-  }
-  .sanpham {
-	width: 12%;
-	margin: 15px;
-	box-sizing: border-box;
-	text-align: center;
-	border-radius: 20px;
-	overflow: hidden;
-	position: relative;
-	cursor: pointer;
-	padding-top: 10px;
-	box-shadow: 0 14px 28px rgba(0,0, 0, 0.25),0 10px 10px rgba(0,0, 0 , 0.22);
-	transition: .4s;
-	background: #f2f2f2;
-  }
-  .sanpham:hover img {
-	transform: scale(1.2);
-  }
-  .sanpham img { 
-	width: 200px;
-	height: 200px;
-	margin: 0 auto;
-	display: block;
-	padding: 0 8px;
-	border-radius: 20px;
-	transition: transform 0.3s ease; /* thêm hiệu ứng chuyển động */
-  
-  }
-  .sanpham h6 { 
-	font-size: 26px;
-	text-align: center;
-	color: #222f3e;
-	margin: 0;
-  }
-  .sanpham button {
-	text-align: center;
-	font-size: 24px;
-	color: #fff;
-	width: 100%;
-	padding: 15px;
-	border: 0;
-	outline: none;
-	cursor: pointer;
-	margin-top: 5px;
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius: 20px;
-  }
-  .sanpham button:hover {
-	color: #3498db;
-  }
-  .buy {
-	background-color:  #ec994b;;
-  }
-  @media (max-width: 1000px){
-	.sanpham {
-	  width: 45px;
-	}
-  }
-  @media (max-width:750px) {
-	.sanpham {
-	  width: 100%;
-	}
-  }
+      
+
+
+
+
+
+
