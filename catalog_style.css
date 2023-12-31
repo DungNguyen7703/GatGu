@@ -151,14 +151,14 @@ a {
   flex:0 0 25%;
   padding:0 15px;
 }
-.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item .title{
+.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item .title1{
 	font-size: 16px;
 	color:#ea4636;
 	font-weight: 500;
 	line-height: 1;
 	padding:10px 0;
 }
-.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center .title{
+.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center .title1{
 	text-align: center;
 }
 .header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item img{
@@ -363,10 +363,10 @@ a {
 	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item img{
 		margin-top:0;
 	}
-	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center .title{
+	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center .title1{
 		margin-bottom: 20px;
 	}
-	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center:last-child .title{
+	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center:last-child .title1{
 		margin-bottom:0px;
 	}
 	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item{
