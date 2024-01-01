@@ -21,8 +21,6 @@ loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let email = document.getElementById("email");
   let password = document.getElementById("password1"); 
-
-  // Mật khẩu xác nhận là trường password2
   let confirmPassword = document.getElementById("password2"); 
 
   if (password.value !== confirmPassword.value) {
