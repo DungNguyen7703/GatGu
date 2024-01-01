@@ -3,8 +3,6 @@ document.getElementById("select").onchange = function() {
     const selectValue = this.value;
     const list = document.querySelector('.list');
     const items = list.querySelectorAll('.item');
-
-    // Chuyển NodeList thành mảng để có thể sử dụng sort
     const itemsArray = Array.from(items);
 
     if (selectValue === 'LowToHigh') {
