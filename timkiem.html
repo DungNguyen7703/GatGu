@@ -104,39 +104,15 @@
     </div>
   </header>
   <!-- header end -->
-  <div class="dropdown" style="display: flex; justify-content: center; font-size: larger;">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" data-bs-toggle="dropdown">
+  <div class="search-container">
+    <form class="d-flex" role="search" id="searchForm">
+      <input type="search" id="searchInput" list="productSuggestions" placeholder="Nhập tên sản phẩm"
+        aria-label="Tìm kiếm" autocomplete="off">
+      <datalist id="productSuggestions"></datalist>
+      <button class="btn btn-outline-success" type="submit">Tìm</button>
+    </form>
 
-                  <button type="button" onclick="myFunction()" class=""btn m-2 btn-light dropdown-toggle"">SEARCH</button>
-                    <ul class="dropdown-menu">
-                        <a href="banphim.html"><li>Bàn Phím </li></a>
-                      <li><a href="tainghe.html">Tai Nghe</a></li>
-                      <li><a href="taycam.html">Tay Cầm</a></li>
-                      <li><a href="catalog_mouse.html">Chuột</a></li>
-                    </ul>
-                  
-              </div>
-
-  <script>
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-    
-    function filterFunction() {
-      var input, filter, ul, li, a, i;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      div = document.getElementById("myDropdown");
-      a = div.getElementsByTagName("a");
-      for (i = 0; i < a.length; i++) {
-        txtValue = a[i].textContent || a[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          a[i].style.display = "";
-        } else {
-          a[i].style.display = "none";
-        }
-      }
-    }
-    </script>
+  </div>
+<script src="timkiem.js"></script>
 </body>
 </html>
