@@ -508,10 +508,6 @@ a{
     border-bottom: 3px solid #457D7D;
 }
 
-.input_label:focus+i.input_icon {
-    color: #457D7D;
-}
-
 i.input_icon {
     position: absolute;
     right: 0;
