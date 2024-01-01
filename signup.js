@@ -20,10 +20,10 @@ let loginForm = document.querySelector(".my-form");
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let email = document.getElementById("email");
-  let password = document.getElementById("password1"); // Sử dụng ID đúng
+  let password = document.getElementById("password1"); 
 
   // Mật khẩu xác nhận là trường password2
-  let confirmPassword = document.getElementById("password2"); // Sử dụng ID đúng
+  let confirmPassword = document.getElementById("password2"); 
 
   if (password.value !== confirmPassword.value) {
       window.alert('Mật khẩu xác nhận không khớp. Vui lòng kiểm tra lại!');
