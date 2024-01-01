@@ -109,10 +109,33 @@
       <input type="search" id="searchInput" list="productSuggestions" placeholder="Nhập tên sản phẩm"
         aria-label="Tìm kiếm" autocomplete="off">
       <datalist id="productSuggestions"></datalist>
-      <button class="btn btn-outline-success" type="submit">Tìm</button>
+      <button class="btn btn-outline-success" type="submit" id="searchButton">Tìm</button>
+      <div id="productList"></div>
     </form>
+
 
   </div>
 <script src="timkiem.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const searchInput = document.getElementById('searchInput');
+  const searchButton = document.getElementById('searchButton');
+
+  if (searchButton) {
+    searchButton.addEventListener('click', function () {
+      const inputValue = searchInput.value.toLowerCase();
+      const selectedProduct = products.find(product => product.name.toLowerCase() === inputValue);
+
+      // Chuyển hướng tới đường dẫn của sản phẩm được chọn
+      if (selectedProduct && selectedProduct.link) {
+        window.location.href = selectedProduct.link;
+      } else {
+        // Xử lý trường hợp không tìm thấy sản phẩm
+        alert('Không tìm thấy sản phẩm');
+      }
+    });
+  }
+});
+</script>
 </body>
 </html>

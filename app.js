@@ -1,7 +1,7 @@
-let iconCart = document.querySelector('.iconCart');
-let cart = document.querySelector('.cart');
-let container = document.querySelector('.container');
-let close = document.querySelector('.close');
+let iconCart = document.querySelector('#iconCart');
+let cart = document.querySelector('#cart');
+let container = document.querySelector('#container');
+let close = document.querySelector('#close');
 
 iconCart.addEventListener('click', function(){
     if(cart.style.right == '-100%'){
@@ -30,7 +30,7 @@ fetch('giohang.json')
 //show datas product in list 
 function addDataToHTML(){
     // remove datas default from HTML
-    let listProductHTML = document.querySelector('.listProduct');
+    let listProductHTML = document.querySelector('.catalouge');
     listProductHTML.innerHTML = '';
 
     // add new datas
