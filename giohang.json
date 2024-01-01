@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Bàn Phím AKKO 3108 V2 BiliBili",
+        "price": 3190000,
+        "image": "photos/bàn phím/BiliBili/AKKO-BiliBili.webp"
+    },
+    {
+        "id": 2,
+        "name": "Chuột GatGu LM108B",
+        "price": 3190000,
+        "image": "photos/chuột/dareu.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Chuột Logitech G102 LightSync White",
+        "price": 3190000,
+        "image": "photos/chuột/Logitech G102 LightSync.webp"
+    }
+]
