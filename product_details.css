@@ -415,6 +415,18 @@ a{
 	color: #333;
 	font-size: 1.2em;
   }
+
+  .feature-sp {
+	display: flex;
+	padding: 5rem 0 0 0 ;
+	justify-content: center;
+  }
+  .feature-sp h1 {
+	color: #ec994b;
+	font-size: 3rem;
+	text-align: center;
+	padding: 4rem 0 2rem 0;
+  }
   .feature {
 	display: flex;
 	flex-wrap: wrap;
