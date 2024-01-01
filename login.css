@@ -530,13 +530,12 @@ i.input_icon {
     display: flex;
     flex-direction: column;
     align-self: center;
-    color: var(--secondary);
     gap: 16px;
     margin-top: 8px;
 }
 
 .no_acc a {
-    color: var(--secondary);
+    color: #000;
     font-weight: 600;
     text-decoration: none;
 }
