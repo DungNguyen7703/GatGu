@@ -1,7 +1,7 @@
 const products = [
     { name: 'Bàn Phím',link: 'banphim.html' },
     { name: 'Bàn Phím AKKO Bilibili',link: 'bilibili.html' },
-    { name: 'Chuột',link: 'chuot.html' },
+    { name: 'Chuột',link: 'catalog_mouse.html' },
     { name: 'Chuột logitech G102',link: 'logitech g102.html' },
     { name: 'Chuột Gatgu egronmic',link: 'dareu lm08b.html' },
     { name: 'Tai Nghe',link: 'tainghe.html' },
